@@ -1,0 +1,77 @@
+---
+import Card from './Cards.astro'
+import Modal from './Modal.astro'
+---
+
+<section id='projects' class="flex items-center justify-center max-h-[1000px] h-screen w-full">
+	<ul class='w-full flex items-center justify-center'>
+		<li id='li-0'>
+			<Card image='../../public/assets/BienesR.webp' alt='Desarrollo integral de un portal de Bienes Raíces para Bienes Raices Silva' />
+		</li>
+		<li id='li-1'>
+			<Card image='../../public/assets/Project2.webp' alt='Desarrollo e-commerce de ropa urbana o casual' />
+		</li>
+	</ul>
+	<Modal />
+</section>
+
+<script type="module" src="../../public/Animation.js"></script>
+
+<style>
+
+	@keyframes fadeInUp {
+	  from {
+	    opacity: 0;
+	    transform: translate3d(0, -40px, 0);
+	  }
+
+	  to {
+	    opacity: 1;
+	    transform: none;
+	  }
+	}
+
+	.animate {
+	  animation: fadeInUp 1s both;
+	}
+
+	.animate:last-child {
+		animation-delay: .1s;
+	}
+
+	section ul {
+		width: 100%;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: repeat(auto-fit,350px);
+		gap: 30px;
+	}
+	section ul li {
+	    opacity: 0;
+		position: relative;
+		cursor: pointer;
+		width: 100%;
+	}
+
+	section ul li:hover:before {
+		background: rgb(0,0,0,0.5);
+	}
+
+	section ul li:before {
+		content: '';
+		position:absolute;
+		top:0;
+		width:100%;
+		height: 100%;
+		background: rgb(0,0,0,0.3);
+		border-radius: 17px;
+	}
+
+	@media screen and (max-width: 400px) {
+		section ul {
+			grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+		}
+	}
+
+</style>

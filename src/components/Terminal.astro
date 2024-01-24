@@ -1,0 +1,97 @@
+---
+import IconClose from '../../public/assets/IconClose.astro'
+---
+
+<div class="div">
+	<div class="divTwo" />
+	<div class="divThree" />
+	<IconClose opacity='.5' cursor='absolute top-3 right-3' />
+</div>
+
+<style>
+	.div {
+		opacity: .4;
+		z-index: -1;
+		bottom: 10%;
+		right: 10%;
+		position: fixed;
+		width: 200px;
+		height: 150px;
+		background: #1a1546;
+		border-radius: 17px;
+		box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
+		animation: div 5s infinite ease-in-out;
+	}
+
+	@keyframes div {
+		0% {
+			transform:translateY(-7px);
+		}
+		50% {
+			transform: translateY(7px);
+		}
+		100% {
+			transform: translateY(-7px);
+		}
+	}
+
+	.div:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 35px;
+		background: #140f37;
+		box-shadow: 0px 5px 3px -3px rgb(0,0,0,.5);
+		top: 0;
+		border-radius: 17px 17px 0 0;
+	}
+	.div:after {
+		content: "";
+		position: absolute;
+		width: 32%;
+		height: 10px;
+		background: #e74292;
+		top: 50px;
+		left: 10px;
+		border-radius: 17px;
+	}
+	.div .divTwo {
+		content: "";
+		position: absolute;
+		width: 65%;
+		height: 10px;
+		background: #c099cd;
+		top: 70px;
+		left: 10px;
+		border-radius: 17px;
+	}
+
+	.div .divTwo:before {
+		content: "";
+		position: absolute;
+		width: 35%;
+		height: 10px;
+		background: #21198d;
+		top: 20px;
+		border-radius: 17px;
+	}
+	.div .divTwo:after {
+		content: "";
+		position: absolute;
+		width: 67%;
+		height: 10px;
+		background: #51dbcf;
+		top: 40px;
+		border-radius: 17px;
+	}
+	.div .divThree {
+		content: "";
+		position: absolute;
+		width: 84%;
+		height: 10px;
+		background: #e74292;
+		bottom: 10px;
+		left: 10px;
+		border-radius: 17px;
+	}
+</style>

@@ -1,0 +1,56 @@
+---
+import IconGitHub from '../../public/assets/IconGitHub.astro'
+import IconWorld from '../../public/assets/IconWorld.astro'
+import IconClose from '../../public/assets/IconClose.astro'
+import IconReact from '../../public/assets/IconReact.astro'
+import IconJavaScript from '../../public/assets/IconJavaScript.astro'
+import IconNode from '../../public/assets/IconNode.astro'
+import IconMySQL from '../../public/assets/IconMySQL.astro'
+import IconTailwind from '../../public/assets/IconTailwind.astro'
+import Badge from './Badge.astro'
+---
+
+<script type="module" src='../../public/modal.jsx' />
+
+<div id='modal' class='fixed hidden w-full h-full top-0'>
+	<div class='flex flex-col justify-center gap-5 p-7 relative w-full lg:w-2/4 h-full lg:h-max bg-[#0c0a20] text-white rounded-xl'>
+		<IconClose opacity='1' cursor='cursor-pointer absolute top-8 right-8' />
+		<h2 id='modal-title' class='text-xl font-black' />
+		<span id='modal-subTitle' class='py-[1px] px-3 bg-[#c099ff] w-max text-[#0c0a20] rounded-3xl font-semibold'>Experiencia laboral</span>
+		<div id='icon-container-1' class='hidden flex gap-1'>
+			<IconReact />
+			<IconJavaScript />
+			<IconNode />
+			<IconMySQL />
+		</div>
+		<div id='icon-container-2' class='hidden flex gap-1'>
+			<IconReact />
+			<IconJavaScript />
+			<IconTailwind />
+		</div>
+		<p id='modal-description' />
+		<Badge
+			id='badgeWeb'
+			titulo='Web'
+			aria='Explora el sitio web'
+			enlace='#pagina.web'
+			icon={IconWorld}
+		/>
+		<Badge
+			id='badgeGitHub'
+			aria='Conoce el codigo de este proyecto'
+			titulo='GitHub'
+			enlace='#'
+			icon={IconGitHub}
+		/>
+	</div>
+</div>
+
+<style>
+	.openModal {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgb(0,0,0,0.5);
+	}
+</style>

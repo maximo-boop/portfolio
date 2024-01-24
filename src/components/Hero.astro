@@ -1,0 +1,97 @@
+ ---
+import Badge from './Badge.astro'
+import IconGmail from '../../public/assets/IconGmail.astro'
+import IconWhsp from '../../public/assets/IconWhsp.astro'
+import IconLinkedIn from '../../public/assets/IconLinkedIn.astro'
+---
+
+<section class="flex flex-col h-screen max-h-900px lg:flex-row-reverse items-center justify-center gap-5 text-white">
+	<img src='../../public/assets/Perfil.webp' alt='Máximo Silva, Desarrollador Fullstack' />
+	<div class='flex flex-col items-center lg:items-start'>
+		<p class='text-3xl font-bold'>Hey, soy Máximo Silva</p>
+		<h1 class="text-lg">Desarrollador Fullstack con experiencia en proyectos web innovadores y escalables.</h1>
+		<h2 class="text-lg">Utilizando tecnologías modernas como <span class="text-[#61dafb]">React</span>,<span> Next.js</span>, <span class='text-[#f55c17]'>Astro</span>, <span class='text-[#38bdf8]'>Tailwind CSS</span>.</h2>
+		<ul class="flex gap-2 mt-5 flex-wrap">
+			<li>
+				<Badge 
+					titulo='maximo2004lfn@gmail.com'
+					enlace='mailto:maximo2004lfn@gmail.com?subject=Tus Servicios&body=Hola, me interesan tus servicios'
+					aria='Contáctate conmigo mediante gmail'
+					icon={IconGmail}
+				/>
+			</li>
+			<li>
+				<Badge 
+					titulo='WhatsApp'
+					enlace='https://wa.me/5493512377435?text=Hola%2C%20me%20interesan%20tus%20servicios'
+					aria='Contáctate conmigo mediante whatsapp'
+					icon={IconWhsp}
+				/>
+			</li>
+			<li>
+				<Badge 
+					titulo='LinkedIn'
+					aria='Contáctate conmigo mediante linkedin'
+					enlace='https://linkedin.com/in/maximo-silva-1681a2281'
+					icon={IconLinkedIn}
+				/>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<style>
+	ul li {
+		opacity: 0;
+		animation: badges .5s forwards ease-in-out;
+	}
+	ul li:nth-child(2) {
+		animation-delay: .1s;
+	}
+	ul li:last-child {
+		animation-delay: .2s;
+	}
+
+	@keyframes badges {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		} 
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	img {
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		object-fit: contain;
+		animation: imgAnimation 1s forwards ease;
+	}
+
+	@keyframes imgAnimation {
+		from {
+			opacity: 0;
+			transform: translateY(-20px);
+		} 
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}	
+
+	@media screen and (min-width: 1024px) {
+		@keyframes imgAnimation {
+			from {
+				opacity: 0;
+				transform: translateX(20px);
+			} 
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+</style>

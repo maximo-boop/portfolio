@@ -1,0 +1,33 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<link rel="preload" href="../../public/assets/Perfil.webp" as='image'>
+		<meta name="author" content="Máximo Silva">
+		<meta name="keywords" content="portfolio, desarrollo fullstack, desarrollo frontend, desarrollo backend, paginas web, programación, desarrollo web">
+		<meta charset="UTF-8" />
+		<meta property="og:title" content="Portafolio de Máximo Silva">
+		<meta property="og:description" content="Explora mi trabajo creativo en el desarrollo de páginas web">
+		<meta name="description" content="Portafolio de Máximo Silva, Explora mi trabajo creativo en el desarrollo de paginas web." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#000,#0c0a20)] w-full h-max flex items-center justify-center px-10 lg:px-40">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	body {
+		overflow-x: hidden;
+	}
+</style>

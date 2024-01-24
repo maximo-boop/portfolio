@@ -1,0 +1,52 @@
+---
+	import Badge from './Badge.astro'
+	import IconDownload from '../../public/assets/IconDownload.astro'
+	import IconReact from '../../public/assets/IconReact.astro'
+	import IconNextJs from '../../public/assets/IconNextJs.astro'
+	import IconJavaScript from '../../public/assets/IconJavaScript.astro'
+	import IconTypeScript from '../../public/assets/IconTypeScript.astro'
+	import IconTailwind from '../../public/assets/IconTailwind.astro'
+	import IconPython from '../../public/assets/IconPython.astro'
+	import IconNode from '../../public/assets/IconNode.astro'
+	import IconMySQL from '../../public/assets/IconMySQL.astro'
+	import IconSQL from '../../public/assets/IconSQL.astro'
+	import IconGitHub from '../../public/assets/IconGitHub.astro'
+	import IconGit from '../../public/assets/IconGit.astro'
+	import IconSvelte from '../../public/assets/IconSvelte.astro'
+---
+
+<section id='about-me' class="flex max-w-[1072px] m-auto text-white flex-col items-center justify-center gap-5">
+	<h2 class='text-3xl font-bold'>SOBRE MI</h2>
+	<h3 class="text-lg ">
+		Lo que más me destaca es que soy una persona con una capacidad de aprendizaje <span class='text-[#fc4683] font-bold'>rápida</span> y <span class='text-[#fc4683] font-bold'>adaptabilidad</span>, lo que me permite comprender y dominar aspectos complejos de la programación en periodos cortos de tiempo.<br> Además, soy una persona <span class='font-bold text-[#51dbe3]'>organizada</span> y <span class='font-bold text-[#51dbe3]'>prolija</span> a la que le gusta tener el control sobre su código, especialmente al hacer animaciones, componentes o utilidades prefiero escribir el código desde cero, aunque comprendo y valoro el uso de frameworks y bibliotecas cuando son apropiados para el proyecto. También disfruto el <span class='text-[#ff2aee] font-bold'>diseño</span> y la <span class='text-[#ff2aee] font-bold'>creación</span> del frontend, por lo que es una de mis partes preferidas a la hora de realizar una página web.</h3>
+	<Badge
+		id={null}
+		aria='Descarga mi cv'
+		titulo='Descargar CV'
+		enlace='https://drive.google.com/file/d/1_ut0msmkJB8P34dGA7ovLoPOkhDpgRpO/view?usp=drive_link'
+		icon={IconDownload}
+	/>
+	<ul class='flex gap-4 flex-wrap'>
+		<li><IconReact /></li>
+		<li><IconNextJs /></li>
+		<li><IconJavaScript /></li>
+		<li><IconTypeScript /></li>
+		<li><IconTailwind /></li>
+		<li><IconPython /></li>
+		<li><IconNode /></li>
+		<li><IconMySQL /></li>
+		<li><IconSQL /></li>
+		<li><IconGitHub /></li>
+		<li><IconGit /></li>
+		<li><IconSvelte /></li>
+	</ul>
+</section>
+
+<style>
+	@media screen and (min-width: 450px) {
+		section {
+			max-height: 900px;
+			height: 100vh;
+		}
+	}
+</style>

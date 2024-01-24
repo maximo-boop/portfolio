@@ -1,0 +1,46 @@
+---
+const particleOpen = "<>"
+const particleClose = "</>"
+---
+
+<div class="div font-black">
+	<span>{particleClose}</span>
+	<span>{particleOpen}</span>
+	<span>{particleClose}</span>
+</div>
+
+<style>
+	.div {
+	}
+	.div span{
+		position: fixed;
+		opacity: .5;
+		color: #743fff;
+		animation: particles 5s infinite linear;
+		z-index: -1;
+	}
+	.div span:first-child {
+		top: 10%;
+		left: 15%;
+	}
+	.div span:nth-child(2) {
+		bottom: 10%;
+		left: 30%;
+		animation-duration: 3s;
+	}
+	.div span:last-child {
+		top: 20%;
+		animation-duration: 6s;
+		animation-direction: reverse;
+		right: 30%;
+	}
+
+	@keyframes particles {
+	  from {
+	    transform: rotate(0deg) translate(5px) rotate(0deg);
+	  }
+	  to {
+	    transform: rotate(360deg) translate(5px) rotate(-360deg);
+	  }
+	}
+</style>
