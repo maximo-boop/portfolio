@@ -6,7 +6,7 @@ const data = {
    'li-0': {
       title: 'Desarrollo integral de un portal de Bienes Raíces',
       description: `En la realización de este proyecto me encargué de varios aspectos y en cada etapa del desarrollo, prioricé las buenas prácticas, la optimización del código y la relevancia del mismo en cuanto al SEO.\n\n Me encargué del diseño y la implementación del Front-end, creando interfaces de usuario interactivas y atractivas que permitían a los usuarios explorar propiedades inmobiliarias de manera intuitiva.<br>Además de implementar programación del lado del Back-end, diseñando una sólida arquitectura basada en Node.js para gestionar las solicitudes de los usuarios y garantizar un rendimiento excepcional.<br>También, la implementación de MySQL fue otro componente esencial de este proyecto. Configuré y administré una base de datos que sirvió como el almacén central de la información detallada sobre las propiedades inmobiliarias y usuarios.`,
-      urlWeb: "https://bienes-raices-silva.vercel.app",
+      urlWeb: "#",
       subTitle: "Experiencia laboral"
    },
    'li-1': {
