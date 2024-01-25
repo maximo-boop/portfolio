@@ -25,14 +25,14 @@ const particleClose = "</>"
 	}
 	.div span:nth-child(2) {
 		bottom: 10%;
-		left: 30%;
+		left: 20%;
 		animation-duration: 3s;
 	}
 	.div span:last-child {
 		top: 20%;
 		animation-duration: 6s;
 		animation-direction: reverse;
-		right: 30%;
+		right: 20%;
 	}
 
 	@keyframes particles {
@@ -42,5 +42,14 @@ const particleClose = "</>"
 	  to {
 	    transform: rotate(360deg) translate(5px) rotate(-360deg);
 	  }
+	}
+
+	@media screen and (min-width: 1024px) {
+		.div span:nth-child(2) {
+			left: 30%
+		}
+		.div span:last-child {
+			right: 30%;
+		}
 	}
 </style>
